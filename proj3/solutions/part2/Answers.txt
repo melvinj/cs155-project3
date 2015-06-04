@@ -1,0 +1,8 @@
+1. The developers of the trustedapp could have made the "Read Contacts" component private by explicitly setting the exported attribute to false in the manifest file. Care should have been taken into what components should have been exposed to the public.
+
+2. In the real world there a bunch of defenses that users can implement:
+      a. Dynamic Byte Loading - static analysis of code can only look at statically availabel bytecode, there are ways of dynamically loading byte code using classLoader, class DexFile
+      b. Static repack protection using "Manifest Cheating" - this involves creatively inserting a class which has to be implemented if someone has to repack the application. Thus if the class is present you know that the application has been repacked
+      c. Runtime Integrity checks - check the app signature, use GooglePlay licensing service
+      d. Anti-debugging using java and native code - detect debuggers
+      e. Callgraph obfuscation - obfuscate code to prevent reverse engineering
