@@ -20,15 +20,14 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 	IGetContactsString mIGetContactsString;
-	String contacts;
+	String contacts = "";
 	private ServiceConnection sc = new ServiceConnection() {
 		@Override
 		public void onServiceConnected(ComponentName name, IBinder service) {
 			mIGetContactsString = IGetContactsString.Stub.asInterface(service);
 			try {
 				contacts = mIGetContactsString.GetContacts("youllnevergetmeluckycharms");
-				Log.v(getClass().getSimpleName(), "Got contacts");
-				Log.v(getClass().getSimpleName(), contacts);
+				showContacts(contacts);
 			} catch (RemoteException e) {
 				Log.v(getClass().getSimpleName(), e.getMessage());
 			}
@@ -73,11 +72,8 @@ public class MainActivity extends Activity {
 
 
     private void stealContacts() {
-	// TODO: your implementation here
+		// TODO: your implementation here
 		Intent intent = new Intent("com.cs155.trustedapp.ReadContactsService");
-		//intent.setClass(getApplicationContext(), IGetContactsString.class);
-		//intent.putExtra("SECRET_KEY", "youllnevergetmeluckycharms");
-		//startService(intent);
 		this.bindService(intent, sc, Context.BIND_AUTO_CREATE);
     }
 }
