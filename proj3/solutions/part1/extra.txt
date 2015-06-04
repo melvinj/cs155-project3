@@ -1,0 +1,24 @@
+Bookmarks
+=========
+Title|URL
+Google|http://www.google.com
+Picasa|http://picasaweb.google.com
+Yahoo!|http://www.yahoo.com
+MSN|http://www.msn.com
+Twitter|http://twitter.com
+Facebook|http://www.facebook.com
+Wikipedia|http://www.wikipedia.org
+eBay|http://www.ebay.com
+CNN|http://www.cnn.com
+NY Times|http://www.nytimes.com
+ESPN|http://espn.com/
+Amazon|http://www.amazon.com/
+Weather Channel|http://www.weather.com/
+BBC|http://www.bbc.co.uk/
+Electronic Frontier Foundation | Defending your rights in the digital world|https://www.eff.org/
+bayareacodepinkaction - san francisco bay area code pink action list|https://lists.riseup.net/www/info/bayareacodepinkaction
+
+Call logs
+==========
+Number
+1 753-999-8500
